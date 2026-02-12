@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #fafafa;
@@ -21,11 +26,6 @@ body {
 /* Global Typography */
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
 }
 
 /* Fade in animation */

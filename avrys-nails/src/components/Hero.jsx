@@ -2,7 +2,7 @@ import './Hero.css';
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section id="home" className="hero">
       <div className="hero-background">
         <div className="collage-element collage-1"></div>
         <div className="collage-element collage-2"></div>

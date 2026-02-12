@@ -14,7 +14,7 @@ const MoodBoard = () => {
   ];
 
   return (
-    <section className="mood-board">
+    <section id="mood" className="mood-board">
       <h2 className="mood-title">The Mood</h2>
       <div className="mood-grid">
         {moodItems.map(item => (

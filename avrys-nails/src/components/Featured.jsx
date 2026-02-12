@@ -11,7 +11,7 @@ const Featured = () => {
   ];
 
   return (
-    <section className="featured">
+    <section id="featured" className="featured">
       <h2 className="featured-title">Featured Sets</h2>
       <div className="featured-grid">
         {featuredSets.map(set => (

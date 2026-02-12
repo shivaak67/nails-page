@@ -2,7 +2,7 @@ import './EditorialFooter.css';
 
 const EditorialFooter = () => {
   return (
-    <footer className="editorial-footer">
+    <footer id="contact" className="editorial-footer">
       <div className="footer-content">
         <div className="footer-links">
           <a href="https://instagram.com/avrysnails" target="_blank" rel="noopener noreferrer" className="footer-link">
