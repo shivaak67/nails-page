@@ -1,0 +1,179 @@
+.mood-board {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.mood-board::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(45deg, rgba(255, 107, 107, 0.03) 0%, transparent 25%),
+    linear-gradient(135deg, rgba(78, 205, 196, 0.03) 0%, transparent 25%),
+    linear-gradient(225deg, rgba(102, 126, 234, 0.03) 0%, transparent 25%);
+  pointer-events: none;
+}
+
+.mood-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #000000;
+  position: relative;
+  z-index: 1;
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.mood-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.1),
+    0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.mood-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.15),
+    0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mood-small {
+  grid-row: span 1;
+}
+
+.mood-medium {
+  grid-row: span 2;
+}
+
+.mood-large {
+  grid-row: span 3;
+}
+
+.mood-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+  position: relative;
+}
+
+.mood-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(78, 205, 196, 0.1) 0%, transparent 50%);
+}
+
+.mood-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mood-item:hover .mood-overlay {
+  opacity: 1;
+}
+
+/* Collage paper texture effect */
+.mood-item::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ffffff, #f0f0f0);
+  border-radius: 22px;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* Random decorative elements */
+.mood-item:nth-child(odd)::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  border-radius: 50%;
+  opacity: 0.3;
+  transform: rotate(45deg);
+}
+
+.mood-item:nth-child(even)::before {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 3px;
+  opacity: 0.3;
+  transform: rotate(15deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mood-board {
+    padding: 3rem 1rem;
+  }
+  
+  .mood-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 150px;
+    gap: 1rem;
+  }
+  
+  .mood-medium {
+    grid-row: span 2;
+  }
+  
+  .mood-large {
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .mood-grid {
+    grid-auto-rows: 120px;
+  }
+}

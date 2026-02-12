@@ -1,20 +1,19 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Gallery from './pages/Gallery';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import './index.css';
+import Hero from './components/Hero';
+import Featured from './components/Featured';
+import MoodBoard from './components/MoodBoard';
+import About from './components/About';
+import EditorialFooter from './components/EditorialFooter';
+import './App.css';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+    <div className="app">
+      <Hero />
+      <Featured />
+      <MoodBoard />
+      <About />
+      <EditorialFooter />
+    </div>
   );
 }
 

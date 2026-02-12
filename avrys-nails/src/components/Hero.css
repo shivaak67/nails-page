@@ -1,0 +1,181 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.collage-element {
+  position: absolute;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.collage-1 {
+  width: 120px;
+  height: 120px;
+  top: 10%;
+  left: 5%;
+  transform: rotate(-3deg);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.collage-2 {
+  width: 80px;
+  height: 80px;
+  top: 20%;
+  right: 10%;
+  transform: rotate(2deg);
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.collage-3 {
+  width: 150px;
+  height: 100px;
+  bottom: 15%;
+  left: 8%;
+  transform: rotate(1deg);
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.collage-4 {
+  width: 100px;
+  height: 150px;
+  bottom: 20%;
+  right: 5%;
+  transform: rotate(-2deg);
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.collage-5 {
+  width: 90px;
+  height: 90px;
+  top: 50%;
+  left: 3%;
+  transform: rotate(3deg);
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.floating-element {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-1 {
+  width: 60px;
+  height: 60px;
+  top: 30%;
+  right: 20%;
+  animation-delay: 0s;
+}
+
+.floating-2 {
+  width: 40px;
+  height: 40px;
+  top: 60%;
+  left: 15%;
+  animation-delay: 2s;
+}
+
+.floating-3 {
+  width: 80px;
+  height: 80px;
+  bottom: 25%;
+  right: 15%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtext {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 400;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+  letter-spacing: 1px;
+}
+
+.hero-cta {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+.hero-cta:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .collage-element {
+    transform: scale(0.7) !important;
+  }
+  
+  .floating-element {
+    transform: scale(0.8) !important;
+  }
+  
+  .hero-content {
+    padding: 1rem;
+  }
+  
+  .hero-cta {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
