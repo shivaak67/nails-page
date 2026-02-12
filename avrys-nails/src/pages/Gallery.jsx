@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const Gallery = () => {
   return (
@@ -10,6 +11,7 @@ const Gallery = () => {
           {/* Images will be manually inserted here */}
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
